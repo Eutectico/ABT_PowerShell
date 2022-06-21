@@ -14,5 +14,5 @@ https://www.buymeacoffee.com/Eutectico
 
 
 
-<a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport">Local Administrator Password</a> 
-<a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/Shutdown_PC">Schutdown Remote Computer</a>
+* <a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport">Local Administrator Password</a> 
+* <a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/Shutdown_PC">Schutdown Remote Computer</a>
