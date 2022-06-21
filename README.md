@@ -11,3 +11,7 @@ Coffee Box
 https://www.buymeacoffee.com/Eutectico
 
 <a href="https://www.buymeacoffee.com/Eutectico" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+
+
+<a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport">Local Administrator Password</a> 
