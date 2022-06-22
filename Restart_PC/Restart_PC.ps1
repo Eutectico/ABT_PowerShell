@@ -1,5 +1,5 @@
 ####################################################
-##  Force PC Shutdown                             ##
+##  Force Remote PC Restart                       ##
 ##                                                ##
 ##  NOTES:                                        ##
 ##  Author: Federico Jose                         ##
@@ -9,7 +9,7 @@
 ##  Version 1.0 - Initial Script Creation         ##
 ####################################################
 
+
 $Creds = Get-Credential
 $Client = Read-Host -Prompt 'Computer Name'
-Stop-Computer -ComputerName $Client -Force -Credential $Creds 
-
+Restart-Computer -ComputerName $Client -Credential $Creds -Force
