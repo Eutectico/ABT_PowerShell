@@ -16,5 +16,6 @@ ________________________________________________________________________________
 
 ## List of Scripts
 
-* <a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport">Local Administrator Password</a> 
-* <a href="https://github.com/Eutectico/ABT_PowerShell/tree/main/Shutdown_PC">Schutdown Remote Computer</a>
+* [Local Administrator Password](https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport) 
+* [Schutdown Remote Computer](https://github.com/Eutectico/ABT_PowerShell/tree/main/Shutdown_PC)
+* [Restart Remote Computer](https://github.com/Eutectico/ABT_PowerShell/tree/main/Restart_PC)
