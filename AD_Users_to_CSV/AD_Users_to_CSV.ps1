@@ -17,7 +17,7 @@ $csvfile = ".\ADUsers_$logDate.csv"
 
 Import-Module ActiveDirectory
 
-$SearchBase = "dc=company,dc=companyname,dc=com"
+$SearchBase = "dc=xyz, dc=com"
 
 $GetAdminact = Get-Credential
 

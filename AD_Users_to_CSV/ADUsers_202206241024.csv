@@ -1,0 +1,4 @@
+"First Name","Last Name","Display Name","Logon Name","Full address","City","State","Post Code","Country/Region","Job Title","Company","Directorate","Department","Office","Phone","Email","Manager","Account Status","Last LogOn Date"
+,,,"Administrator",,,,,"",,,"Built-in account for administering the computer/domain",,"",,,,"Enabled","6/24/2022 5:29:01 PM"
+,,,"Guest",,,,,"",,,"Built-in account for guest access to the computer/domain",,"",,,,"Disabled",
+,,,"krbtgt",,,,,"",,,"Key Distribution Center Service Account",,"",,,,"Disabled",
