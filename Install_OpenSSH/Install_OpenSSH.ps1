@@ -1,3 +1,13 @@
+####################################################
+##  Simple PS to install OpenSSH                  ##
+##                                                ##
+##  NOTES:                                        ##
+##  Author: Federico Jose                         ##
+##  Create: 27 Jun 2022                           ##
+##                                                ##
+##  Modified:                                     ##
+##  Version 1.0 - Initial Script Creation         ##
+####################################################
 
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
