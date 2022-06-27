@@ -17,7 +17,9 @@ ________________________________________________________________________________
 ## List of Scripts
 
 * [Export AD users to a .csv file](https://github.com/Eutectico/ABT_PowerShell/tree/main/AD_Users_to_CSV)
+* [Copy_File](https://github.com/Eutectico/ABT_PowerShell/tree/main/Copy_File) 
 * [Local Administrator Password](https://github.com/Eutectico/ABT_PowerShell/tree/main/LAPSexport) 
 * [Schutdown Remote Computer](https://github.com/Eutectico/ABT_PowerShell/tree/main/Shutdown_PC)
 * [Restart Remote Computer](https://github.com/Eutectico/ABT_PowerShell/tree/main/Restart_PC)
 * [Remote_PSSession](https://github.com/Eutectico/ABT_PowerShell/tree/main/Remote_PSSession)
+* [Install_OpenSSH](https://github.com/Eutectico/ABT_PowerShell/tree/main/Install_OpenSSH)
