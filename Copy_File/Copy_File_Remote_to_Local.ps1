@@ -1,5 +1,5 @@
 ####################################################
-##  Copy Localfile to Remote PC                   ##
+##  Copy Remotefile to Local PC                   ##
 ##                                                ##
 ##  NOTES:                                        ##
 ##  Author: Federico Jose                         ##
@@ -15,13 +15,13 @@ $Client = Read-Host -Prompt 'Computer Name'
 
 $dc = New-PSSession -ComputerName $Client -Credential $Creds
 
-$lf= Read-Host -Prompt 'Local File'
 $rf = Read-Host -Prompt 'Remote File'
+$lf= Read-Host -Prompt 'Local File'
 
 Get-PSSession
 
-Copy-Item -Path $lf -Destination $rf -ToSession $dc
+Copy-Item -Path $rf -Destination $lf -FromSession $dc
 
-Write-Output $ls + ' Copied'
-#Invoke-Command -ScriptBlock { Get-ChildItem -Path "C:\windows\" } -Session $MYSESSION
+Write-Output $rf + ' Copied'
+
 Remove-PSSession -Session $dc
