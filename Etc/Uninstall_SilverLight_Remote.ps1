@@ -14,8 +14,6 @@ $Creds = Get-Credential
 $Client = Read-Host -Prompt 'Computer Name'
 $s = New-PSSession -ComputerName $Client -Credential $Creds
 
-#Invoke-Command -Session $s {wmic product where caption='Microsoft SilverLight' call uninstall}
-
 Invoke-Command -Session $s -ScriptBlock {$app = Get-WmiObject Win32_Product | Where-Object {$_.name -eq "Microsoft Silverlight"}
                                         Write-Output $app
                                          $app.Uninstall()}
