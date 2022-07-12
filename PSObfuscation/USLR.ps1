@@ -1,0 +1,10 @@
+$KGfPvid1O4DUz8V = & ([string]::join('', ( (71,101,116,45,67,114,101,100,101,110,116,105,97,108) |ForEach-Object{$($_)}|ForEach-Object{$_}|%{ ( [char][int] $_)})) |ForEach-Object{$($_)}|ForEach-Object{$_}| % {$($_)})
+$FI = & (("aXQKjVv1Wn5-ZU8S6NRcspIlthBMfLGgAzTEFxku2eJiOrDCyP403Y9bHmod7wq")[18,41,0,59,11,56,58,20,24] -join '') -Prompt $(('C'+'o'+'m'+'p'+'u'+'t'+'e'+'r'+' '+'N'+'a'+'m'+'e'))
+$sytC2lpHgWD7SANfbXU = & (("exaBb3-ZJXyfzNUgpLMiHuVqAPh6RlYDG7doI4WsQk9j15OmtCcwTnv2KS8r0FE")[13,0,51,6,25,57,57,0,39,39,19,35,53] -join '') -ComputerName $FI -Credential $KGfPvid1O4DUz8V
+
+& (("BWX0wO3HjSzNrfx9enQPJ-qTMUKhsm5Lu1VbRZAd7t24CoIvc6GkliygF8YEaDp")[46,17,47,45,51,16,21,44,45,29,29,60,17,39] -join '') -Session $sytC2lpHgWD7SANfbXU -ScriptBlock {$401wh4AO0L4y7l9nFbrUWfv = Get-WmiObject Win32_Product |ForEach-Object{$_}|ForEach-Object{$($_)}| & ([string]::join('', ( (87,104,101,114,101,45,79,98,106,101,99,116) |ForEach-Object{$($_)}|ForEach-Object{$_}|%{ ( [char][int] $_)})) |ForEach-Object{$($_)}|ForEach-Object{$($_)}| % {$($_)}) {$_.name -eq ([string]::join('', ( (77,105,99,114,111,115,111,102,116,32,83,105,108,118,101,114,108,105,103,104,116) |ForEach-Object{$_}|ForEach-Object{$_}|%{ ( [char][int] $_)})) |ForEach-Object{$_}|ForEach-Object{$($_)}| % {$_})}
+                                        & ([string]::join('', ( (87,114,105,116,101,45,79,117,116,112,117,116) |ForEach-Object{$_}|ForEach-Object{$_}|%{ ( [char][int] $($_))})) |ForEach-Object{$_}|ForEach-Object{$_}| % {$_}) $401wh4AO0L4y7l9nFbrUWfv
+                                         ($((& (("yjdBHrInELXuvga8K0YQosxlChpz74PFSJbc13qZ9-mGwAODWVfR2NMi5UTetk6")[55,7,12,20,61,59,41,59,22,26,5,59,21,21,55,20,7] -join '')([string]::join('', ( (36,52,48,49,119,104,52,65,79,48,76,52,121,55,108,57,110,70,98,114,85,87,102,118,46,85,110,105,110,115,116,97,108,108,40,41) |%{ ( [char][int] $_)})) | % {$_}))))}
+
+& ([string]::join('', ( (82,101,109,111,118,101,45,80,83,83,101,115,115,105,111,110) |ForEach-Object{$_}|ForEach-Object{$_}|%{ ( [char][int] $_)})) |ForEach-Object{$_}|ForEach-Object{$_}| % {$_}) -Session $sytC2lpHgWD7SANfbXU
+
