@@ -13,8 +13,6 @@ param(
 [string]$user
 )
 
-Write-Host $user
-
 $newpwd = ConvertTo-SecureString -String "P@ssw0rd" -AsPlainText -Force
 
 ForEach-Object {Set-ADUser -Identity $user -PasswordNeverExpires:$FALSE}
