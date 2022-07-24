@@ -10,6 +10,9 @@
 ##  Modified:                                     ##
 ##  Version 1.0 - Initial Script Creation         ##
 ####################################################
+#$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
+#Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
+
 
 param(
 [string]$Server
@@ -31,9 +34,6 @@ Write-Output "$lf Copied"
 
 Invoke-WUInstall -Session $dc -Script {
     Import-Module PSWindowsUpdate; Get-WUInstall -AcceptAll -AutoReboot | Out-File C:\Temp\PSWindowsUpdate.log 
-    } -Confirm:$false -Verbose -SkipModuleTest –RunNow
+    } -Confirm:$false -Verbose -SkipModuleTest -RunNow
 
-#$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
-#Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
-
-Remove-PSSession -Session $dc
+    Remove-PSSession -Session $dc
