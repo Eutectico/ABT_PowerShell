@@ -15,6 +15,6 @@ param(
 [string]$Server
 )
 
-Invoke-WUInstall -ComputerName server1, server2 -Script {
-    ipmo PSWindowsUpdate; Get-WUInstall -AcceptAll -AutoReboot | Out-File C:\Windows\PSWindowsUpdate.log 
+Invoke-WUInstall -ComputerName $Server -Script {
+    Import-Module PSWindowsUpdate; Get-WUInstall -AcceptAll -AutoReboot | Out-File C:\Temp\PSWindowsUpdate.log 
     } -Confirm:$false -Verbose -SkipModuleTest –RunNow
