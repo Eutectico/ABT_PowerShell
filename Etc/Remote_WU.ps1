@@ -45,7 +45,7 @@ Get-PSSession
         Import-Module PSWindowsUpdate
         Get-WindowsUpdate | Out-File C:\Temp\PSWindowsUpdate.log        
     }
-    Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose -SkipModuleTest -RunNow | Out-File C:\Temp\PSWindowsUpdate.log
+    Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose -RunNow | Out-File C:\Temp\PSWindowsUpdate.log
 }
 
 Remove-PSSession -Session $dc
