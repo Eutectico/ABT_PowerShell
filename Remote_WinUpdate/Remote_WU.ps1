@@ -5,7 +5,7 @@
 ##                                                ##
 ##  NOTES:                                        ##
 ##  Author: Federico Jose                         ##
-##  Create: 19 Jul 2022                           ##
+##  Create: 24 Jul 2022                           ##
 ##                                                ##
 ##  Modified:                                     ##
 ##  Version 1.0 - Initial Script Creation         ##
@@ -17,11 +17,11 @@ param(
 )
 
 
-$Creds = Get-Credential
+#$Creds = Get-Credential
 #Create a variable for the date stamp in the log file
 $LogDate = get-date -f yyyyMMddhhmm
-$dc = New-PSSession -ComputerName $Server -Credential $Creds
-
+#$dc = New-PSSession -ComputerName $Server -Credential $Creds
+$dc = New-PSSession -ComputerName $Server
 Get-PSSession
 
 Invoke-Command -Session $dc -ScriptBlock  {
@@ -33,6 +33,7 @@ Invoke-Command -Session $dc -ScriptBlock  {
     }
     Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log
 } >> ".\Windows10Upgrade.log"
+
 Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
 Remove-PSSession -Session $dc
