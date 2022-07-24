@@ -38,7 +38,7 @@ Get-PSSession
 #    } -Confirm:$false -Verbose -SkipModuleTest -RunNow
 
 
- Invoke-Command ($Server) Session $dc {
+ Invoke-Command ($Server) -Session $dc {
     If ($null -eq (Get-Module -Name PSWindowsUpdate -ListAvailable) ) {
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module PSWindowsUpdate -Force
