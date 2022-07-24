@@ -1,19 +1,20 @@
+
 ####################################################
-##  Reset AD users Password                       ##
+##  Install Windows Updates on Remote             ##
+##  Computers with PowerShell                     ##
 ##                                                ##
 ##  NOTES:                                        ##
 ##  Author: Federico Jose                         ##
-##  Create: 13 Jul 2022                           ##
+##  Create: 19 Jul 2022                           ##
 ##                                                ##
 ##  Modified:                                     ##
 ##  Version 1.0 - Initial Script Creation         ##
 ####################################################
 
 param(
-[string]$user
+[string]$Server
 )
 
-$newpwd = ConvertTo-SecureString -String "P@ssw0rd" -AsPlainText -Force
-
-ForEach-Object {Set-ADUser -Identity $user -PasswordNeverExpires:$FALSE}
-Set-ADAccountPassword $user -NewPassword $newpwd -Reset -PassThru | Set-ADuser -ChangePasswordAtLogon $True 
+Invoke-WUInstall -ComputerName server1, server2 -Script {
+    ipmo PSWindowsUpdate; Get-WUInstall -AcceptAll -AutoReboot | Out-File C:\Windows\PSWindowsUpdate.log 
+    } -Confirm:$false -Verbose -SkipModuleTest –RunNow
