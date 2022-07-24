@@ -24,13 +24,15 @@ Get-PSSession
 Copy-Item -Path $lf -Destination $rf -ToSession $dc
 Write-Output $lf + ' Copied'
 
-Invoke-Command -Session $dc -ScriptBlock {                                         
+Invoke-Command -Session $dc -ScriptBlock { C:\Temp\Windows10Upgrade.exe                                        
                                          }
 
 
 
+#Create a variable for the date stamp in the log file
+$LogDate = get-date -f yyyyMMddhhmm
 
-Write-Output $Server + " Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
+Write-Output $LogDate $Server " Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
 Remove-PSSession -Session $dc
 
