@@ -34,6 +34,6 @@ Invoke-WUInstall -ComputerName $Server -Script {
     } -Confirm:$false -Verbose -SkipModuleTest –RunNow
 
 #$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
-Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
+#Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
 Remove-PSSession -Session $dc
