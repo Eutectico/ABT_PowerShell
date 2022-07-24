@@ -44,7 +44,7 @@ Get-PSSession
         Get-WindowsUpdate | Out-File C:\Temp\PSWindowsUpdate.log        
     }
     Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log
-}
+} >> ".\Windows10Upgrade.log"
 #$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
 Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
