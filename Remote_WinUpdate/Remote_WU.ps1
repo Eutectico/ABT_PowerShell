@@ -29,8 +29,9 @@ Invoke-Command -Session $dc -ScriptBlock  {
         Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
         Install-Module PSWindowsUpdate -Force
         Import-Module PSWindowsUpdate
-        Get-WindowsUpdate | Out-File C:\Temp\PSWindowsUpdate.log        
+        Get-WindowsUpdate         
     }
+    $LogDate = get-date -f yyyyMMddhhmm
     Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log
 } >> ".\Windows10Upgrade.log"
 
