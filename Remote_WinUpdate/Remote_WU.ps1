@@ -11,17 +11,15 @@
 ##  Version 1.0 - Initial Script Creation         ##
 ####################################################
 
-#$Targets = "PC1-name", "PC2-name"
 param(
 [string]$Server
 )
 
-
-#$Creds = Get-Credential
+$Creds = Get-Credential
 #Create a variable for the date stamp in the log file
 $LogDate = get-date -f yyyyMMddhhmm
-#$dc = New-PSSession -ComputerName $Server -Credential $Creds
-$dc = New-PSSession -ComputerName $Server
+$dc = New-PSSession -ComputerName $Server -Credential $Creds
+#$dc = New-PSSession -ComputerName $Server
 Get-PSSession
 
 Invoke-Command -Session $dc -ScriptBlock  {
