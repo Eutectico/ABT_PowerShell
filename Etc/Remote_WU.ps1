@@ -10,8 +10,6 @@
 ##  Modified:                                     ##
 ##  Version 1.0 - Initial Script Creation         ##
 ####################################################
-#$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
-#Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
 #$Targets = "PC1-name", "PC2-name"
 param(
@@ -21,7 +19,7 @@ param(
 
 $Creds = Get-Credential
 #Create a variable for the date stamp in the log file
-#$LogDate = get-date -f yyyyMMddhhmm
+$LogDate = get-date -f yyyyMMddhhmm
 #$lf = ".\Windows10Upgrade.exe"
 #$rf = "C:\Temp\Windows10Upgrade.exe"
 $dc = New-PSSession -ComputerName $Server -Credential $Creds
@@ -45,7 +43,9 @@ Get-PSSession
         Import-Module PSWindowsUpdate
         Get-WindowsUpdate | Out-File C:\Temp\PSWindowsUpdate.log        
     }
-    Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate.log
-} -SkipModuleTest -RunNow
+    Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log
+}
+#$Output = Write-Output C:\Temp\PSWindowsUpdate.log 
+Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
 
 Remove-PSSession -Session $dc
