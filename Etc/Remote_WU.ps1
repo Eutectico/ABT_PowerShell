@@ -46,6 +46,6 @@ Get-PSSession
         Get-WindowsUpdate | Out-File C:\Temp\PSWindowsUpdate.log        
     }
     Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate.log
-}
+} -Confirm:$false -Verbose -SkipModuleTest -RunNow
 
 Remove-PSSession -Session $dc
