@@ -30,7 +30,7 @@ Invoke-Command -Session $dc -ScriptBlock  {
         Get-WindowsUpdate         
     }
     $LogDate = get-date -f yyyyMMddhhmm
-    Install-WindowsUpdate -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log
+    Get-WUInstall -AcceptAll -AutoReboot -Verbose | Out-File C:\Temp\PSWindowsUpdate_$LogDate.log     
 } >> ".\Windows10Upgrade.log"
 
 Write-Output "$LogDate $Output $Server Windows 10 Upgrade Installed Succesfully" >> ".\Windows10Upgrade.log"
