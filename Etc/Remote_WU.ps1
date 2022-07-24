@@ -29,7 +29,7 @@ Write-Output "$lf Copied"
 #Starting Remote WU
 #Invoke-Command -Session $dc -ScriptBlock { Start-Process "C:\Temp\Windows10Upgrade.exe"}
 
-Invoke-WUInstall -ComputerName $Server -Script {
+Invoke-WUInstall -Session $dc -Script {
     Import-Module PSWindowsUpdate; Get-WUInstall -AcceptAll -AutoReboot | Out-File C:\Temp\PSWindowsUpdate.log 
     } -Confirm:$false -Verbose -SkipModuleTest –RunNow
 
